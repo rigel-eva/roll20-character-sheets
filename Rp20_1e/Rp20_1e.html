@@ -103,7 +103,13 @@
             		<td><input type="number" name="attr_InitiativeBonus" value="0"/></td>
             		<td><input type="number" name="attr_Initiative" value="@{Dexterity}+@{InitiativeBonus}" disabled="true" /></td>
             		<td><button type="roll" value="&{template:attributecheck} {{name=Initiative}} {{check=[[1d20+@{Initiative}]]}} {{checktag=roll}}" ></button></td>
-            	</tr>
+                </tr>
+                <tr>
+                    <td align="right"><u>Move Speed:</u></td>
+                    <td><span name="attr_Strength"></span></td>
+                    <td><input type="number" name="attr_MoveBonus" value="0"</td>
+                    <td><input type="number" name="attr_initiative" value="floor(@{Strength}/2)-2+@{attr_MoveBonus}" disabled="true"</td>
+                </tr>
             </table>
 
             <br />
